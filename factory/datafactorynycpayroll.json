@@ -1,0 +1,17 @@
+{
+	"name": "datafactorynycpayroll",
+	"properties": {
+		"globalParameters": {
+			"GLOBAL_FISICAL_YEAR": {
+				"type": "int",
+				"value": 2019
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9b6c3c7b-132d-491e-8692-fcf5420c5ec6",
+		"tenantId": "f419c9fe-f7b0-4d87-bee8-e8dfb2190cab"
+	}
+}
