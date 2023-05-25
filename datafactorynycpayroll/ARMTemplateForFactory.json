@@ -99,7 +99,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -135,7 +135,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -229,10 +229,12 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/LOAD 2021 PAYROLL TO SQL DB')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD 2021 PAYROLL TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD AGENCY MASTER TO SYNAPSE')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD EMPLOYEE MASTER TO SYNAPSE')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD TITLE MASTER TO SYNAPSE')]"
 			]
 		},
@@ -272,7 +274,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -294,7 +296,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/Dataflow Aggregate Data')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -342,7 +345,8 @@
 				"lastPublishTime": "2023-05-24T14:18:12Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/LOAD 2021 PAYROLL TO SQL DB')]"
+				"[concat(variables('factoryId'), '/dataflows/LOAD 2021 PAYROLL TO SQL DB')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -375,7 +379,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -397,7 +401,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/LOAD 2021 PAYROLL TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -430,7 +435,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -452,7 +457,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/LOAD AGENCY MASTER TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -485,7 +491,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -507,7 +513,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/LOAD EMPLOYEE MASTER TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
@@ -540,7 +547,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -562,7 +569,8 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/dataflows/LOAD TITLE MASTER TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
+				"[concat(variables('factoryId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
 			]
 		},
 		{
