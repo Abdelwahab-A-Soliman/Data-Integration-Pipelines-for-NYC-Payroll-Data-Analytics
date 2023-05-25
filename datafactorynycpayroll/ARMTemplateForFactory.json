@@ -171,7 +171,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -207,7 +207,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -234,7 +234,6 @@
 				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorage1')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD AGENCY MASTER TO SYNAPSE')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD EMPLOYEE MASTER TO SYNAPSE')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1link')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD TITLE MASTER TO SYNAPSE')]"
 			]
 		},

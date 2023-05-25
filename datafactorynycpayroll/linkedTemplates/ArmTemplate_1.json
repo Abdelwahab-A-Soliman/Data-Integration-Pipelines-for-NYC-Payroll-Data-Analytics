@@ -318,7 +318,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
@@ -354,7 +354,7 @@
 							},
 							"staging": {
 								"linkedService": {
-									"referenceName": "AzureBlobStorage1link",
+									"referenceName": "AzureDataLakeStorage1",
 									"type": "LinkedServiceReference"
 								},
 								"folderPath": "dirstaging"
