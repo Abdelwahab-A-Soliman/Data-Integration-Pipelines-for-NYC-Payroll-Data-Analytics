@@ -7,10 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "datafactorynycpayroll"
 		},
-		"AzureBlobStorage1link_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1link'"
-		},
 		"AzureSqlDatabase1link_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1link'"
@@ -53,9 +49,6 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
-					},
-					"AzureBlobStorage1link_connectionString": {
-						"value": "[parameters('AzureBlobStorage1link_connectionString')]"
 					},
 					"AzureSqlDatabase1link_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1link_connectionString')]"

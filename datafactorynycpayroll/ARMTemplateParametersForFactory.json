@@ -5,9 +5,6 @@
 		"factoryName": {
 			"value": "datafactorynycpayroll"
 		},
-		"AzureBlobStorage1link_connectionString": {
-			"value": ""
-		},
 		"AzureSqlDatabase1link_connectionString": {
 			"value": ""
 		},

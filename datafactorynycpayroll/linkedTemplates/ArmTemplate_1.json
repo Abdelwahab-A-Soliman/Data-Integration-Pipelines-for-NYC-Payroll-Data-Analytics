@@ -13,61 +13,6 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/LOAD AGENCY MASTER TO SYNAPSE')]",
-			"type": "Microsoft.DataFactory/factories/dataflows",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "MappingDataFlow",
-				"typeProperties": {
-					"sources": [
-						{
-							"dataset": {
-								"referenceName": "AgencyMaster",
-								"type": "DatasetReference"
-							},
-							"name": "AGENCY"
-						}
-					],
-					"sinks": [
-						{
-							"dataset": {
-								"referenceName": "NYC_PAYROLL_AGENCY_MD",
-								"type": "DatasetReference"
-							},
-							"name": "NYCPAYROLLAGENCY"
-						}
-					],
-					"transformations": [],
-					"scriptLines": [
-						"source(output(",
-						"          AgencyID as string,",
-						"          AgencyName as string",
-						"     ),",
-						"     allowSchemaDrift: true,",
-						"     validateSchema: false,",
-						"     ignoreNoFilesFound: false) ~> AGENCY",
-						"AGENCY sink(allowSchemaDrift: true,",
-						"     validateSchema: false,",
-						"     input(",
-						"          AgencyID as string,",
-						"          AgencyName as string",
-						"     ),",
-						"     deletable:false,",
-						"     insertable:true,",
-						"     updateable:false,",
-						"     upsertable:false,",
-						"     format: 'table',",
-						"     staged: true,",
-						"     allowCopyCommand: true,",
-						"     skipDuplicateMapInputs: true,",
-						"     skipDuplicateMapOutputs: true,",
-						"     errorHandlingOption: 'stopOnFirstError') ~> NYCPAYROLLAGENCY"
-					]
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/LOAD EMPLOYEE MASTER TO SYNAPSE')]",
 			"type": "Microsoft.DataFactory/factories/dataflows",
 			"apiVersion": "2018-06-01",
@@ -375,7 +320,6 @@
 				"lastPublishTime": "2023-05-24T14:41:16Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/LOAD AGENCY MASTER TO SYNAPSE')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD EMPLOYEE MASTER TO SYNAPSE')]",
 				"[concat(variables('factoryId'), '/dataflows/LOAD TITLE MASTER TO SYNAPSE')]"
 			]
@@ -586,9 +530,7 @@
 				"annotations": [],
 				"lastPublishTime": "2023-05-24T14:18:10Z"
 			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/LOAD AGENCY MASTER TO SYNAPSE')]"
-			]
+			"dependsOn": []
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/PIPELINE LOAD EMPLOYEE MASTER TO SYNAPSE')]",
