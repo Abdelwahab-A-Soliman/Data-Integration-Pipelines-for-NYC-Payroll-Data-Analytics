@@ -2,16 +2,16 @@
 	"name": "nycpayroll_2021",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1link",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
+				"type": "AzureBlobFSLocation",
 				"fileName": "nycpayroll_2021.csv",
-				"container": "dirpayrollfiles"
+				"fileSystem": "dirpayrollfiles"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
